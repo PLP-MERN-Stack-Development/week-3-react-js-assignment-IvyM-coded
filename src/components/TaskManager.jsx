@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Button from './Button';
 
-/**
- * Custom hook for managing tasks with localStorage persistence
- */
+
 const useLocalStorageTasks = () => {
   // Initialize state from localStorage or with empty array
   const [tasks, setTasks] = useState(() => {
@@ -48,9 +46,8 @@ const useLocalStorageTasks = () => {
   return { tasks, addTask, toggleTask, deleteTask };
 };
 
-/**
- * TaskManager component for managing tasks
- */
+ //TaskManager component for managing tasks
+
 const TaskManager = () => {
   const { tasks, addTask, toggleTask, deleteTask } = useLocalStorageTasks();
   const [newTaskText, setNewTaskText] = useState('');
